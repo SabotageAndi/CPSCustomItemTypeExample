@@ -6,4 +6,5 @@
   <ItemGroup>
     <CustomFileTypeFile Include="**\*.customFileType"></CustomFileTypeFile>
   </ItemGroup>
+
 </Project>
