@@ -20,8 +20,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Composition" Version="15.8.98" />
+    <PackageReference Include="Microsoft.VisualStudio.ProjectSystem" Version="15.8.243" />
     <PackageReference Include="Microsoft.VisualStudio.ProjectSystem.Sdk" Version="15.8.243" />
+    <PackageReference Include="Microsoft.VisualStudio.ProjectSystem.SDK.Tools" Version="15.8.243" />
+    <PackageReference Include="Microsoft.VisualStudio.Shell.15.0" Version="15.9.28307" />
+    <PackageReference Include="Microsoft.VisualStudio.Threading" Version="15.8.132" />
     <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="15.8.3247" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
+    <PackageReference Include="System.Threading.Tasks.Dataflow" Version="4.5.24" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,8 +56,28 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="BuildSystem\Rules\" />
+    <XamlPropertyRule Remove="BuildSystem\Rules\ProjectItemsSchema.xaml" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="BuildSystem\Rules\ProjectItemsSchema.xaml">
+      <Generator></Generator>
+    </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Build">
+      <HintPath>Microsoft.Build</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Framework">
+      <HintPath>Microsoft.Build.Framework</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Utilities.Core">
+      <HintPath>Microsoft.Build.Utilities.Core</HintPath>
+    </Reference>
+  </ItemGroup>
+
 
   <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="Exists('$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets')" />

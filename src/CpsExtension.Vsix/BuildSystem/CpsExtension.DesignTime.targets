@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PropertyPageSchema Include="$(CpsExtensionSchemaDirectory)CustomDebugger.xaml">
-      <Context>Project</Context>
+    <PropertyPageSchema Include="$(CpsExtensionSchemaDirectory)CustomItemType.xaml;">
+      <Context>File;BrowseObject</Context>
     </PropertyPageSchema>
   </ItemGroup>
 
