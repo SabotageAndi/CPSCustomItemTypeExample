@@ -9,4 +9,8 @@
     <PropertyPageSchema Include="$(CpsExtensionSchemaDirectory)\ProjectItemsSchema.xaml;"/>
   </ItemGroup>
 
+  <PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\customFileType.xaml;">
+    <Context>File;BrowseObject</Context>
+  </PropertyPageSchema>
+
 </Project>

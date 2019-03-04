@@ -41,6 +41,8 @@
     <Reference Include="Microsoft.Build.Utilities.Core">
       <HintPath>Microsoft.Build.Utilities.Core</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Xaml" />
   </ItemGroup>
 
 
@@ -71,6 +73,18 @@
 
   <ItemGroup>
     <XamlPropertyRule Remove="BuildSystem\Rules\ProjectItemsSchema.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="BuildSystem\Rules\ProjectItemsSchema.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <XamlPropertyRule Update="BuildSystem\Rules\customFileType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </XamlPropertyRule>
   </ItemGroup>
 
 

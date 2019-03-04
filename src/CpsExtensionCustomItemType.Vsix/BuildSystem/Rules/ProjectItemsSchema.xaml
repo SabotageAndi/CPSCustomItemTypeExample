@@ -3,10 +3,14 @@
 <ProjectSchemaDefinitions
     xmlns="http://schemas.microsoft.com/build/2009/properties">
 
-    <ItemType Name="CustomFileItemType" DisplayName="Custom File Item Type"/>
+    <ContentType
+        Name="customFileTypeSourceFile" 
+        DisplayName="customFileType source file" 
+        ItemType="customFileTypeCompile">
+    </ContentType>
 
-    <ContentType Name="CustomFileContentType" DisplayName="Custom File Content Type" ItemType="CustomFileItemType" />
+    <ItemType Name="customFileTypeCompile" DisplayName="customFileType source file"/>
 
-    <FileExtension Name=".customFileType" ContentType="CustomFileContentType" />
+    <FileExtension Name=".customFileType" ContentType="customFileTypeSourceFile" />
 
 </ProjectSchemaDefinitions>
