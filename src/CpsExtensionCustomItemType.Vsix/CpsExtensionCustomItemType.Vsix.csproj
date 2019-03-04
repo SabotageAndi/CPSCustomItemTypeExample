@@ -8,7 +8,7 @@
     <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)obj\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\</IntermediateOutputPath>
     <OutputPath>$(BaseOutputPath)$(Configuration)\</OutputPath>
-    <RootNamespace>CpsExtensionCustomItemTypeVsix</RootNamespace>
+    <RootNamespace>CpsExtensionCustomItemType.Vsix</RootNamespace>
   </PropertyGroup>
 
   <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.props" />
@@ -41,7 +41,7 @@
   <ItemGroup>
     <VSIXSourceItem Include="BuildSystem\**" Exclude="**\*.cs">
       <InstallRoot>MSBuild</InstallRoot>
-      <VSIXSubPath>Microsoft\VisualStudio\v15.0\CpsExtensionCustomItemTypeVsix\%(RelativeDir)</VSIXSubPath>
+      <VSIXSubPath>Microsoft\VisualStudio\v15.0\CpsExtensionCustomItemType.Vsix\%(RelativeDir)</VSIXSubPath>
       <Visible>false</Visible>
     </VSIXSourceItem>
   </ItemGroup>

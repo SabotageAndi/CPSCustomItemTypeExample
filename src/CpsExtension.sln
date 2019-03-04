@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27829.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CpsExtensionCustomItemTypeVsix", "CpsExtensionCustomItemTypeVsix\CpsExtensionCustomItemTypeVsix.csproj", "{0E3E2F1F-98E9-40D5-9626-D4ACA5E9A498}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CpsExtensionCustomItemType.Vsix", "CpsExtensionCustomItemType.Vsix\CpsExtensionCustomItemType.Vsix.csproj", "{0E3E2F1F-98E9-40D5-9626-D4ACA5E9A498}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{82FAA790-2392-48AC-A268-24F4D11014F1}"
 	ProjectSection(SolutionItems) = preProject

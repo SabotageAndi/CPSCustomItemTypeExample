@@ -2,7 +2,7 @@ using System.Composition;
 using Microsoft.VisualStudio.ProjectSystem;
 using Microsoft.VisualStudio.ProjectSystem.Properties;
 
-namespace CpsExtensionCustomItemTypeVsix.Rules
+namespace CpsExtensionCustomItemType.Vsix.Rules
 {
     /// <summary>
     /// Strongly typed properties, for use with xaml rules
