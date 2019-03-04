@@ -7,10 +7,6 @@
 
   <ItemGroup>
     <PropertyPageSchema Include="$(CpsExtensionSchemaDirectory)\ProjectItemsSchema.xaml;"/>
-
-    <PropertyPageSchema Include="$(CpsExtensionSchemaDirectory)CustomItemType.xaml;">
-      <Context>File;BrowseObject</Context>
-    </PropertyPageSchema>
   </ItemGroup>
 
 </Project>

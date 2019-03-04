@@ -4,7 +4,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <CustomFileTypeFile Include="**\*.customFileType"></CustomFileTypeFile>
+    <CustomFileItemType Include="**\*.customFileType"></CustomFileItemType>
   </ItemGroup>
 
 

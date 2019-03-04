@@ -31,6 +31,23 @@
     <PackageReference Include="System.Threading.Tasks.Dataflow" Version="4.5.24" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Microsoft.Build">
+      <HintPath>Microsoft.Build</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Framework">
+      <HintPath>Microsoft.Build.Framework</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Utilities.Core">
+      <HintPath>Microsoft.Build.Utilities.Core</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Remove="BuildSystem\Rules\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <Content Include="BuildSystem\**" Exclude="**\*.cs;**\*.xaml">
@@ -56,34 +73,11 @@
     <XamlPropertyRule Remove="BuildSystem\Rules\ProjectItemsSchema.xaml" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="BuildSystem\Rules\ProjectItemsSchema.xaml">
-      <Generator></Generator>
-    </None>
-  </ItemGroup>
 
-
-  <ItemGroup>
-    <Reference Include="Microsoft.Build">
-      <HintPath>Microsoft.Build</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Build.Framework">
-      <HintPath>Microsoft.Build.Framework</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Build.Utilities.Core">
-      <HintPath>Microsoft.Build.Utilities.Core</HintPath>
-    </Reference>
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <None Update="BuildSystem\Rules\CustomItemType.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-  </ItemGroup>
 
 
   <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="Exists('$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets')" />
+  
 
 </Project>
