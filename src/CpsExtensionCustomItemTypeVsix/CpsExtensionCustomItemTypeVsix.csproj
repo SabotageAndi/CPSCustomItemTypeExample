@@ -8,7 +8,7 @@
     <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)obj\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\</IntermediateOutputPath>
     <OutputPath>$(BaseOutputPath)$(Configuration)\</OutputPath>
-    <RootNamespace>CpsExtension</RootNamespace>
+    <RootNamespace>CpsExtensionCustomItemTypeVsix</RootNamespace>
   </PropertyGroup>
 
   <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.props" />
@@ -31,9 +31,6 @@
     <PackageReference Include="System.Threading.Tasks.Dataflow" Version="4.5.24" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Remove="BuildSystem\Rules\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <Content Include="BuildSystem\**" Exclude="**\*.cs;**\*.xaml">
@@ -44,7 +41,7 @@
   <ItemGroup>
     <VSIXSourceItem Include="BuildSystem\**" Exclude="**\*.cs">
       <InstallRoot>MSBuild</InstallRoot>
-      <VSIXSubPath>Microsoft\VisualStudio\v15.0\CpsExtension\%(RelativeDir)</VSIXSubPath>
+      <VSIXSubPath>Microsoft\VisualStudio\v15.0\CpsExtensionCustomItemTypeVsix\%(RelativeDir)</VSIXSubPath>
       <Visible>false</Visible>
     </VSIXSourceItem>
   </ItemGroup>
@@ -76,6 +73,13 @@
     <Reference Include="Microsoft.Build.Utilities.Core">
       <HintPath>Microsoft.Build.Utilities.Core</HintPath>
     </Reference>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Update="BuildSystem\Rules\CustomItemType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 
 

@@ -1,9 +1,9 @@
-namespace CpsExtension.Rules
-{
-    using System.Composition;
-    using Microsoft.VisualStudio.ProjectSystem;
-    using Microsoft.VisualStudio.ProjectSystem.Properties;
+using System.Composition;
+using Microsoft.VisualStudio.ProjectSystem;
+using Microsoft.VisualStudio.ProjectSystem.Properties;
 
+namespace CpsExtensionCustomItemTypeVsix.Rules
+{
     /// <summary>
     /// Strongly typed properties, for use with xaml rules
     /// </summary>
