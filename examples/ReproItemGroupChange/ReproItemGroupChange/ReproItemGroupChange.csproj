@@ -1,16 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="ItemGroups.props" />
+
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <customFileTypeSourceFile Include="**\*.customFileType"></customFileTypeSourceFile>
-  </ItemGroup>
+ 
 
   <PropertyGroup>
-    <CpsExtensionDesignTimeTargetsPath Condition="'$(CpsExtensionDesignTimeTargetsPath)' == ''">C:\Users\awi\AppData\Local\Microsoft\VisualStudio\15.0_74a62f9bExp\Extensions\Microsoft Corporation\CpsExtensionCustomItemTypeVsix\1.0\$MSBuild\Microsoft\VisualStudio\v15.0\CpsExtensionCustomItemType.Vsix\BuildSystem\CpsExtension.DesignTime.targets</CpsExtensionDesignTimeTargetsPath>
+    <CpsExtensionDesignTimeTargetsPath Condition="'$(CpsExtensionDesignTimeTargetsPath)' == ''">$(MSBuildThisFileDirectory)\BuildSystem\CpsExtension.DesignTime.targets</CpsExtensionDesignTimeTargetsPath>
   </PropertyGroup>
 
   <Import Project="$(CpsExtensionDesignTimeTargetsPath)" Condition="'$(DesignTimeBuild)' == 'true'" />
+
 
 </Project>

@@ -1,0 +1,7 @@
+﻿<Project>
+
+  <ItemGroup>
+    <customFileTypeSourceFile Include="**\*.customFileType"></customFileTypeSourceFile>
+  </ItemGroup>
+
+</Project>
